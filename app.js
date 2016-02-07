@@ -34,14 +34,16 @@ app.get('/3DprinterPost', function(req, res) {
     res.render('3DprinterPost');
 });
 
-app.get('/3DMaking', function(req, res) {
-    //res.sendFile(path.join(__dirname + '/3DprinterPost'));
-    res.render('3DMaking');
-});
+
 
 app.get('/robotArmPost', function(req, res) {
     //res.sendFile(path.join(__dirname + '/3DprinterPost'));
     res.render('robotArmPost');
+});
+
+app.get('/3DMaking', function(req, res) {
+    //res.sendFile(path.join(__dirname + '/3DprinterPost'));
+    res.render('3DMaking');
 });
 
 //===========================================================
