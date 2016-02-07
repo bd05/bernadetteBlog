@@ -46,6 +46,10 @@ app.get('/3DMaking', function(req, res) {
     res.render('3DMaking');
 });
 
+app.get('/wearablesHackathonPost', function(req, res) {
+    //res.sendFile(path.join(__dirname + '/3DprinterPost'));
+    res.render('wearablesHackathonPost');
+});
 //===========================================================
 
 // catch 404 and forward to error handler
