@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bernadette's Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/blogPosts.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll">
+
+    <!-- Intro Header -->
+<header class="intro-header" style="background-image: url('images/road-in-a-field-of-flowers.jpg')">
+        <div class="overlay">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h2 class="postTitle">Making a 3D printer</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-home"></i> Home </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="/#about">About Me</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#projectBlog">Project Blog</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>   
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    </header>
+
+    <!-- Actual blog post -->
+    <section id="robotArmPost">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Took a stab at a robot arm</h3>
+                <p>
+                I debated posting this, it wasn't a fancy project or anything. But I originally really wanted to make the 3D printer work so I could print this robot arm, whose wooden frame was too heavy for the weak motors I had, in PLA. In the spirit of open-source electronics, I think I'll speak a bit about this MeArm I played around with for a bit.
+                </p>
+                <p>
+                A while ago I ordered a wooden MeArm kit off of Ebay. I believe the <a href="https://hackaday.io/project/181-mearm-your-robot">MeArm</a> was created by Hackaday. It is a low cost DIY robot arm for hobbyists and education. The laser-cut wooden parts I ordered unfortunately didn't come with any motors, so I ordered 9g micro servoses separately off of Ebay. When they arrived, I assembled the robot arm with the motors.
+                </p>
+                <center>
+                <img src="/images/mearm.jpg" width="30%" height="30%"/> <!--pic of assembled robot arm-->
+                </center>
+                <p>
+                The rest was pretty straight forward, seeing as Adafruit has a nice servos motor library for Arduino. I tested a single micro servos with it first to get the hang of it, then modified the code to fit in four servoses, made sure they could be controlled with potentiometers, then hooked up ther servoses in the robot arm. The servos motors were pretty weak for the weight of the robot arm. It would move really slowly, or shake and struggle as it tried to lift its heavy head. Eventually one of the motors burned out, and I stopped trying to play around with it. I'm not sure if this was because I bought really cheap motors (they were about $2 each), or because the wood was too heavy, and I should recommend against the wood and promote getting acrylic parts. In any case I'll keep both things in mind for next time.
+                </p>
+                <p>
+                At this point in time I was very fixated with gesture control. I bought an accelerometer, hooked it up to an Arduino Uno, hooked a micro servos up to it as well, then coded so that the servos was controlled by the tilt of the accelerometer. I was thinking of soldering the circuit to a PCB, gluing it to a glove, then communicating via tilt + radio frequency, blue tooth, or wifi to the Arduino hooked up to the actual robot arm. In any case, at this point one of my motors had died from fighting the weight of the wooden arm, so I wasn't going to continue until I had better motors or an arm of lighter material. I might go out of my way to do this sometime. For now I'm a bit distracted by other ideas. Like making this site, haha.
+
+                To be continued maybe!
+                </p>
+
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Contact Me</h3>
+                <p>Questions? Comments? Email me!</p>
+                <p>                
+                    <a href="berdao.09@gmail.com" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-envelope"></i> <span class="network-name">Email</span></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Bernadette Dao &copy; 2016</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/blog.js"></script>
+
+</body>
+
+</html>

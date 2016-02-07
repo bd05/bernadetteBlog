@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bernadette's Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/blogPosts.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll">
+
+    <!-- Intro Header -->
+<header class="intro-header" style="background-image: url('images/road-in-a-field-of-flowers.jpg')">
+        <div class="overlay">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h2 class="postTitle">Making a 3D printer</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-home"></i> Home </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="/#about">About Me</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#projectBlog">Project Blog</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>   
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    </header>
+
+    <!-- Actual blog post -->
+    <section id="3DprinterBlogPost">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Homemade 3D Printer</h3>
+                <p>This is going to be a long post. I'd been planning to do a blog post on this for a while, but I needed to actually make a website to put the blog on. Now instead of updating the blog on this side project periodically, I shall vomit it out all in one post.</p>
+                <p>
+                An acquaintance of mine bought 3D printer parts to make a DIY 3D printer. I'm wondering if I should call it a "kit", because I don't think it was one of those standard DIY 3D printer kits, like the ones I would see people talking about on the open-source DIY 3D printer forums. The parts came in a plain brown box with writing in Chinese on the sides and was taped shut with duct tape. It also didn't come with the right size of screws for the metal heatbed. Apparently it was bought for about $400 or $450 in cash from someone running a shop in a storage unit. I think the seller actually made this 3D printer kit himself - there was an acrylic frame for the printer, but some of the parts seemed to definitely be printed by another 3D printer. I couldn't find tutorials online which seemed to have the exact same combination of types of parts. This one used an MK8 J-head extruder, but I struggled to figure out the details of the stepper motor being used. I believe it was manufactured in China, and I remember having trouble finding a datasheet for it. I ended up guessing at some values when doing some calculations when calibrating, then tweaking with the values till it worked. But ah well, I guess it made it more fun that way.
+                </p>
+                <center>
+                <img src="images/3d_printed_part.jpg" width="30%" height="30%"/>
+                <p>The lines on this printer part definitely look like 3D printed layers to me.</p>
+                </center>
+                <p>The fan holder and nozzle didn't actually line up with the parts it was supposed to screw onto :(. The second hole in the holder wouldn't reach. So it ended up just having to dangle from the top, supported by one screw and nut. The fan holder and nozzle was 3D-printed no doubt. You can see both the layers and infill pattern (maybe not very clearly in this badly taken photo). </p>
+                <center>
+                <!--<div class="row">
+                    <div class="col-lg-6">-->
+                    <img src="images/misaligned_fan_holder.jpg" width="40%" height="40%"/>
+                    <!--</div>
+                    <div class="col-lg-6">-->
+                    <img src="images/twist_tie_fan.jpg" width="40%" height="40%"/>
+                    <!--</div>
+                </div>-->
+            </center>
+                <p>
+                Eventually I used a wire to twist tie the second hole of the fan to the structure, to keep it stable while printing. Advanced technology, I know. It made me feel like one of these memes:
+                </p>
+                <center><img src="http://img.memecdn.com/rmx-trust-me-im-an-engineer_o_707798.jpg" width="30%" height="30%"/>
+                </center>
+                <p>
+                Anyhow, the acrylic frame had an "i3" engraved in it, so I'm assuming the kit was meant to be some hybrid of the Prusa i3 family. Unfortunately it didn't seem to correspond perfectly for any of the online tutorials on Prusas, but parts of the tutorials were applicable at times. The seller had provided some PDF files for assembling the printer. The acquaintance assembled the printer according to their instruction in two days, then decided they weren't up for doing the firmware or software of it. So I volunteered, and thus set to getting the printer to work.
+                </p>
+                <center><img src="/images/3d_printer_assembled.png" width="35%" height="35%"/> <!--picture of the printer assembled-->
+                </center>
+                <p>
+                I ended up dealing with the mechanical parts of the 3D printer much more than I had expected. I got used to continually taking apart the fan-extruder-stepper motor mechanism to unclog the extruder, for example. Or continually adjusting the z-switch and heat bed height to have the starting height of the printing be not too high and not too low. The hot end of the extruder must be just above, but not touching the heat bed. Just enough so that you can pull a piece of paper between the two and have it be taut.
+                </P>
+                <p>
+                If I bugged enough, the acquaintance would help with troubleshooting or listen to issues or logic and provide problem-solving suggestions. After a while the acquaintance got tired of the 3D printer though (or maybe of me constantly talking about it, haha), so I was left to my own devices. 
+                </p>
+                <p>
+                The board the printer used was an Arduino Mega and RAMPS. Well, not an official one - some duplicate or replica of one, but it is fully functional so I'm not complaining. There are open source firmwares for Prusa printers online, and I tried using some. None of them fit the odd hybrid that which was the printer breed I was working with, so I set to changing and customizing the firmware to fit the particular combination of parts at hand. I tried two or three different versions of Marlin firmware as I had seen some Instructables using it. Unfortunately the custom tweaks in the tutorials I found seemed to be nothing near what this printer needed to function, so I set out to manually experiment and calibrate. In the end I ended up basing my firmware off of Sprinter firmware. I found this calibration guide especially useful, if any of you are on the eye out for one:
+                <a href="http://reprap.org/wiki/Triffid_Hunter's_Calibration_Guide"> Triffid Hunter's Calibration Guide</a>
+                </p>
+                <p>
+                The seller provided a program for controlling the printer on USB, but it was in Chinese, which I don't unerstand. So I looked up open source software and looked into making it work with the hardware. At first I tried Pronterface, but I forget why I abandoned it. Anyhow in the end for reasons I don't remember I decided Repetier Host was the way to go. For generating G-code I like to use Slic3r (not the Slic3r built in with Repetier Host. I downloaded the independent Slic3r application, as I find it has more options and customization available).
+                </p>
+                <p>Here is an early attempt at trying to print with even dimensions. This was me trying to print a calibration cube.</p>
+                <center>
+                <img src="/images/tower_babel.jpg" width="30%" height="30%"/>
+                <p>As you can see, it produced the Tower of Babel instead.</p>
+                </center>
+                <p>Evidently one of the problems above was that the z-step value was too high. If you look closely at each layer you can see that they slightly droop down. But progress was slowly made:</p>
+                <center>
+                    <img src="/images/rectangle_cube1.jpg" width="30%" height="30%"/>
+                    <img src="/images/rectangle_cube2.jpg" width="30%" height="30%"/>
+                    <img src="/images/rectangle_cube3.jpg" width="30%" height="30%"/>
+                </center>
+                <p>Note the awful build quality on some of those though. If the z-step is too low, the layers will squish together and look ugly. Build quality can also be affected by the extrusion values in the G-code of the object you are printing. This was the first calibration cube that actually came out as, well, a cube:</p>
+                <center>
+                <img src="/images/brittle_calibration_cube.jpg" width="30%" height="30%"/> <!--pic of the first cube but with bad build quality-->
+                </center>
+                <p>The cube was extremely brittle and actually broke when I pried it off of the heat bed. (That might have be my fault for being impatient and violently ripping it off though.) Anyhow, this fragile cube was printed with G-code generated by Cura. I generated the G-code using the same .stl file except with Slic3r, and found the build quality significantly improved: </p>
+                <center>
+                <img src="/images/calibration_cube.jpg" width="30%" height="30%"/> <!--pic of successful cube-->
+                </center>
+                <p>
+                Finally, a properly printed calibration cube! I can't tell you how happy I was about this. I was curious as to why the Slic3r cube and Cura cube turned out so differently, so I pulled out the G-code to inspect.
+                </p>
+                <img src=""/> <!--screenshot of cura and slic3r g-code side by side-->
+                <p>
+                Cura tends to produce smaller extrusion values. Once I'm on my laptop with the files on them, I'll screen shot the Cura and Slic3r code side by side to show. With this particular G-code file, some layers were actually being skipped as well. There might be some way to customize Cura to produce larger extrusion values. But anywhow, since Slic3r was working, I kept using it anyway. Here are the settings I like to use:
+                </p>
+                <center>
+                <img src="/images/slic3r_settings1.png" width="60%" height="60%"/>
+                <img src="/images/slic3r_settings2.png" width="60%" height="60%"/>
+                <img src="/images/slic3r_settings3.png" width="60%" height="60%"/>
+                </center> <!--screenshot of slic3r settings-->
+                <p>
+                Before I end this post I'd just like to say that this tape is excellent for getting your print to stick to the heat bed, if you are having any trouble with that:
+                </p>
+                <center>
+                <img src="/images/scotch_tape.jpg" width="30%" height="30%"/> <!--picture of tape wrapper-->
+                </center>
+                <p>
+                Of course, you can try increasing the heat bed and extruder temperature as well.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Contact Me</h3>
+                <p>Questions? Comments? Email me!</p>
+                <p>                
+                    <a href="berdao.09@gmail.com" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-envelope"></i> <span class="network-name">Email</span></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Bernadette Dao &copy; 2016</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/blog.js"></script>
+
+</body>
+
+</html>
